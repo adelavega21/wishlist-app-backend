@@ -11,7 +11,8 @@ class Api::V1::WishlistsController < ApplicationController
     end
 
     def create 
-        wishlist = Wishlist.new(
+        # byebug
+        wishlist = Wishlist.create(
             title: params[:title],
             user_id: params[:user_id]
         )
